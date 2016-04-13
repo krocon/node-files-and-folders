@@ -1,6 +1,6 @@
 {
   "name": "files-and-folders",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "File commander (Client/Server)",
   "keywords": [
     "FnF",
@@ -17,8 +17,8 @@
   },
   "main": "index.js",
   "dependencies": {
-    "files-and-folders-client": "~0.0.1",
-    "files-and-folders-server": "~0.0.2"
+    "files-and-folders-client": "~0.0.3",
+    "files-and-folders-server": "~0.0.4"
   },
   "devDependencies": {},
   "readmeFilename": "README.md",

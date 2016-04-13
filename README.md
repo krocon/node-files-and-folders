@@ -29,7 +29,11 @@ It's an early version! Tested on Windows 7 and Mac OS X only. Documentation will
 
 ## Installation
 
+Create an empty folder. Open your shell (console) and navigate to this folder. Enter:  
 > npm i files-and-folders
+A directory named *node_modules* is create with some sub folders.
+Navigate to *node_modules/files-and-folders/*.
+Start app with:  node demo.app.js
 
 ## Usage
 
