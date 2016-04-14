@@ -32,7 +32,7 @@ It's an early version! Tested on Windows 7 and Mac OS X only. Documentation will
 Create an empty folder. Open your shell (console) and navigate to this folder. Enter:  
 > npm i files-and-folders
 
-A directory named *node_modules* is create with some sub folders.
+A directory named *node_modules* is created with some sub folders.
 Navigate to *node_modules/files-and-folders/*.
 Start app with:  node demo.app.js
 
@@ -55,9 +55,25 @@ Edit and call the demo app:
 You can set an auth module, see demo.auth.js.
 
 ### Customizing
+
+
+
 #### User definable colors: <a name="colors"></a>
+
 A color customizing dialog will be added. At the moment you can change an existing color scheme (or add a new one) by editing the json files in the folder *./node_modules/files-and-folders-server/config/color/*.
 In browser click on the last button (pencil icon) to open the color menu and select a color scheme. The colors changes immediately. This state will be saved (see *./node_modules/files-and-folders-server/temp/*). This means, after page reload you will get the last (saved) state.
+
+The user can choose between three predefined color schemes:
+
+Light:
+![light Colro Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539794/2c4416da-0282-11e6-8637-5d684c519452.png)
+
+Dark:
+![Dark Color Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539705/c04be08e-0281-11e6-80ad-587815be3415.png)
+
+Blackboard:
+![Blackboard Scheme](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
+
 
 #### User definable keyboard shortcuts: <a name="shortcuts"></a>
 Speed up your workflow by relying less on the mouse. Create a custom list of keyboard shortcuts using various action keys.
