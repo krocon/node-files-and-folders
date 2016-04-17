@@ -27,6 +27,30 @@ It's an early version! Tested on Windows 7 and Mac OS X only. Documentation will
 * Open a terminal window with active folder ("New Terminal Here")
 * Much more
 
+## File Operations / Functions
+
+Functions                      | Description
+------------------------------ | ------------------------------------
+Copy                           | Copies selected items (file and/or folders) to a new target folder.
+Move                           | Moves selected items to a new folder.
+Create Dir                     | Creaes a single sub directory.
+Delete                         | Delete selected items.
+Find                           | Finds files or directories.
+Change Dir (Tree)              | Opens a dialog with a list of sub directories.
+Rename                         | Rename a single file or directory.
+Multi Rename                   | Multi rename tons of files with patterns or predefined makros.
+Group Files                    | Moving files to (new) folders. Folder name is derived from file name. Files with running numbers will be moved to one folder. User can specify algorithm in a dialog. A preview is shown before operation starts.  
+Delete Empty Folders           | Delete all empty folder recursive.
+Copy names to clipboard        | Copy names of selected items to clipboard in different styles.
+External Tools / CMD Shell                  | External tools can be defined in a config file.
+External Tools / Edit                       |
+External Tools / Reveal in Finder (Mac)     |
+Go to anything                 | Open a small dialog with auto completion (all commands).
+Different Selection            | Some menu items for select files/folder in an extra sub menu.
+Reload                         | Refreshes all open file lists. 
+ 
+All file operations can be done on selected items (seleted files/folders in a file panel view or found file/folders after a search).
+
 ## Installation
 
 Create an empty folder. Open your shell (console) and navigate to this folder. Enter:  
@@ -36,7 +60,7 @@ A directory named *node_modules* is created with some sub folders.
 Navigate to *node_modules/files-and-folders/*.
 Start app with:  node demo.app.js
 
-## Usage
+### Usage
 
 Edit and call the demo app:
 ```js
