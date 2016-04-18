@@ -1,5 +1,5 @@
 # files-and-folders (FnF)
-Become a master of file management with **"Files and Folders"** (FnF). FnF is an orthodox browser based file managers for Mac OS X, Windows and Linux.
+Become a master of file management with **"Files and Folders"** (FnF). FnF is an orthodox browser based file manager for *Mac OS X*, *Windows* and *Linux*.
 
 The server component based on *Node.js*, the client component on *AngularJS*. 
 
@@ -30,8 +30,6 @@ It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be e
 * Much more
 
 ## File Operations / Functions
-
-
 File Operations / Functions    | Description
 ------------------------------ | --------------------------------------------------------------------
 Copy                           | Copies selected items (file and/or folders) to a new target folder.
