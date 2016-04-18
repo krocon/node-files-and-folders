@@ -1,7 +1,9 @@
 # files-and-folders (FnF)
-Become a master of file management with **"Files and Folders"** (FnF).
+Become a master of file management with **"Files and Folders"** (FnF). FnF is an orthodox browser based file managers for Mac OS X, Windows and Linux.
 
-It's an early version! Tested on Windows 7 and Mac OS X only. Documentation will be expanded and new features will be added.
+The server component based on *Node.js*, the client component on *AngularJS*. 
+
+It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be expanded and new features will be added.
 
 ![screen](https://cloud.githubusercontent.com/assets/11378781/14437724/ed962c40-0022-11e6-963f-523c2225df9b.png)
 
@@ -29,11 +31,12 @@ It's an early version! Tested on Windows 7 and Mac OS X only. Documentation will
 
 ## File Operations / Functions
 
-Functions                      | Description
------------------------------- | ------------------------------------
+
+File Operations / Functions    | Description
+------------------------------ | --------------------------------------------------------------------
 Copy                           | Copies selected items (file and/or folders) to a new target folder.
 Move                           | Moves selected items to a new folder.
-Create Dir                     | Creaes a single sub directory.
+Create Dir                     | Creates a single sub directory.
 Delete                         | Delete selected items.
 Find                           | Finds files or directories.
 Change Dir (Tree)              | Opens a dialog with a list of sub directories.
@@ -42,9 +45,7 @@ Multi Rename                   | Multi rename tons of files with patterns or pre
 Group Files                    | Moving files to (new) folders. Folder name is derived from file name. Files with running numbers will be moved to one folder. User can specify algorithm in a dialog. A preview is shown before operation starts.  
 Delete Empty Folders           | Delete all empty folder recursive.
 Copy names to clipboard        | Copy names of selected items to clipboard in different styles.
-External Tools / CMD Shell                  | External tools can be defined in a config file.
-External Tools / Edit                       |
-External Tools / Reveal in Finder (Mac)     |
+External Tools / CMD Shell     | External tools can be defined in a config file. Predfined: CMD Shell, Edit and Reveal in Finder (Mac).
 Go to anything                 | Open a small dialog with auto completion (all commands).
 Different Selection            | Some menu items for select files/folder in an extra sub menu.
 Reload                         | Refreshes all open file lists. 
@@ -57,7 +58,7 @@ Create an empty folder. Open your shell (console) and navigate to this folder. E
 > npm i files-and-folders
 
 A directory named *node_modules* is created with some sub folders.
-Navigate to *node_modules/files-and-folders/*.
+Navigate to *node_modul
 Start app with:  node demo.app.js
 
 ### Usage
@@ -65,15 +66,24 @@ Start app with:  node demo.app.js
 Edit and call the demo app:
 ```js
 (function () {
+
   "use strict";
 
   var fnf = require('files-and-folders-server');
+  var open = require('open');
+
+  var port = 3002;
+
   console.info('app / __dirname :', __dirname);
   fnf.start({
     // auth: require('./demo.auth.js'), // optional
     clientRoot: __dirname + '/node_modules/files-and-folders-client/release',
-    port:3002
+    port: port
   });
+
+  var url = 'http://localhost:' + port + '/';
+  open(url);
+
 })();
 ```
 You can set an auth module, see demo.auth.js.
@@ -96,7 +106,7 @@ Dark:
 ![Dark Color Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539705/c04be08e-0281-11e6-80ad-587815be3415.png)
 
 Blackboard:
-![Blackboard Scheme](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
+![Blackboard Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
 
 
 #### User definable keyboard shortcuts: <a name="shortcuts"></a>
@@ -106,8 +116,16 @@ A keyboard shortcut customizing dialog will be added. At the moment you can chan
 
 In these json files you can map a shortcut with an action id. You can add more than one shortcut to an action id. The action ids should be self explained. Shortcuts are expained here: [Keypress](https://dmauro.github.io/Keypress/) by David Mauro.
 
+## Related projects
 
-
-
+* [angular-filemanager](https://github.com/joni2back/angular-filemanager)
+* [extplorer](http://extplorer.sourceforge.net/)
+* [simogeo filemanager](https://github.com/simogeo/Filemanager)
+* [elFinder](https://github.com/Studio-42/elFinder)
+* [Double Commander](http://doublecmd.sourceforge.net/)
+* [muCommander](http://www.mucommander.com/)
+* [mootools-filemanager](https://github.com/cpojer/mootools-filemanager)
+* [Responsive Filemanager](https://github.com/trippo/ResponsiveFilemanager)
+* [Filemanager para Laravel 5](https://github.com/guillermomartinez/filemanager-laravel)
 
 # More infos coming soon...
