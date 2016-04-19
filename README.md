@@ -1,7 +1,7 @@
 # files-and-folders (FnF)
 Become a master of file management with **"Files and Folders"** (FnF). FnF is an orthodox browser based file manager for *Mac OS X*, *Windows* and *Linux*.
 
-The server component based on *Node.js*, the client component on *AngularJS*. 
+The server component based on *Node.js*, the client component on *AngularJS*.
 
 It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be expanded and new features will be added.
 
@@ -30,29 +30,68 @@ It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be e
 * Much more
 
 ## File Operations / Functions
-File Operations / Functions    | Description
------------------------------- | --------------------------------------------------------------------
-Copy                           | Copies selected items (file and/or folders) to a new target folder.
-Move                           | Moves selected items to a new folder.
-Create Dir                     | Creates a single sub directory.
-Delete                         | Delete selected items.
-Find                           | Finds files or directories.
-Change Dir (Tree)              | Opens a dialog with a list of sub directories.
-Rename                         | Rename a single file or directory.
-Multi Rename                   | Multi rename tons of files with patterns or predefined makros.
-Group Files                    | Moving files to (new) folders. Folder name is derived from file name. Files with running numbers will be moved to one folder. User can specify algorithm in a dialog. A preview is shown before operation starts.  
-Delete Empty Folders           | Delete all empty folder recursive.
-Copy names to clipboard        | Copy names of selected items to clipboard in different styles.
-External Tools / CMD Shell     | External tools can be defined in a config file. Predfined: CMD Shell, Edit and Reveal in Finder (Mac).
-Go to anything                 | Open a small dialog with auto completion (all commands).
-Different Selection            | Some menu items for select files/folder in an extra sub menu.
-Reload                         | Refreshes all open file lists. 
- 
 All file operations can be done on selected items (seleted files/folders in a file panel view or found file/folders after a search).
+
+* [Copy](#Copy)
+* [Move](#Move)
+* [Create Dir](#CreateDir)
+* [Delete](#Delete)
+* [Find](#Find)
+* [Change Dir (Tree](#ChangeDir)
+* [Rename](#Rename)
+* [Multi Rename](#MultiRename)
+* [Group Files](#GroupFiles)
+* [Delete Empty Folders](#DeleteEmptyFolders)
+* [Copy names to clipboard](#CopyNamesToclipboard)
+* [External Tools / CMD Shell](#ExternalTools)
+* [Go to anything](#GoToAnything)
+
+### Copy <a name="copy"></a>
+Copies selected items (file and/or folders) to a new target folder.
+
+### Move <a name="Move"></a>
+Moves selected items to a new folder.
+
+### Create Dir <a name="CreateDir"></a>
+Creates a single sub directory.
+
+### Delete <a name="Delete"></a>
+Delete selected items.
+
+### Find <a name="Find"></a>
+Finds files or directories.
+
+## Rename <a name="Rename"></a>
+Rename a single file or directory.
+
+### Multi Rename <a name="MultiRename"></a>
+Multi rename tons of files with patterns or predefined makros.
+![multirename](https://cloud.githubusercontent.com/assets/11378781/14649815/f7ce37b0-0668-11e6-8d6c-840ed4241642.png)
+
+### Group Files <a name="GroupFiles"></a>
+Moving files to (new) folders. Folder name is derived from file name. Files with running numbers will be moved to one folder. User can specify algorithm in a dialog. A preview is shown before operation starts.
+![groupfiles](https://cloud.githubusercontent.com/assets/11378781/14649929/8b83a40e-0669-11e6-8694-a09b66512afb.png)
+
+### Delete Empty Folders <a name="DeleteEmptyFolders"></a>
+Delete all empty folder recursive.
+
+### Copy names to clipboard <a name="CopyNamesToclipboard"></a>
+Copy names of selected items to clipboard in different styles (tab separated or JSON array).
+
+### External Tools / CMD Shell <a name="ExternalTools"></a>
+External tools can be defined in a config file. These tools are external commands.
+Predfined: CMD Shell, Edit and Reveal in Finder (Mac).
+
+### Change Dir (Tree <a name="ChangeDir"></a>
+Opens a dialog with a list of sub directories.
+![changedir](https://cloud.githubusercontent.com/assets/11378781/14649976/dbead624-0669-11e6-914a-fda8bec3c3ec.png)
+
+### Go to anything <a name="GoToAnything"></a>
+A small dialog with auto completion allows the user to enter commands.
 
 ## Installation
 
-Create an empty folder. Open your shell (console) and navigate to this folder. Enter:  
+Create an empty folder. Open your shell (console) and navigate to this folder. Enter:
 > npm i files-and-folders
 
 A directory named *node_modules* is created with some sub folders.
