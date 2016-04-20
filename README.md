@@ -29,6 +29,75 @@ It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be e
 * Open a terminal window with active folder ("New Terminal Here")
 * Much more
 
+## Installation
+
+Create an empty folder. Open your shell (console) and navigate to this folder. Enter:
+> npm i files-and-folders
+
+A directory named *node_modules* is created with some sub folders. Navigate to *node_modules/files-and-folders* Enter:
+> cd node_modules/files-and-folders
+
+Start app with:  
+> node demo.app.js
+
+In case of an error have a look at *clientRoot: __dirname + '/../files-and-folders-client/release'*.
+
+### Usage
+
+Edit and call the demo app:
+```js
+(function () {
+
+  "use strict";
+
+  var fnf = require('files-and-folders-server');
+  var open = require('open');
+
+  var port = 3002;
+
+  console.info('app / __dirname :', __dirname);
+  fnf.start({
+    // auth: require('./demo.auth.js'), // optional
+    clientRoot: __dirname + '/node_modules/files-and-folders-client/release',
+    port: port
+  });
+
+  var url = 'http://localhost:' + port + '/';
+  open(url);
+
+})();
+```
+You can set an auth module, see demo.auth.js.
+
+### Customizing
+
+
+
+#### User definable colors: <a name="colors"></a>
+
+A color customizing dialog will be added. At the moment you can change an existing color scheme (or add a new one) by editing the json files in the folder *./node_modules/files-and-folders-server/config/color/*.
+In browser click on the last button (pencil icon) to open the color menu and select a color scheme. The colors changes immediately. This state will be saved (see *./node_modules/files-and-folders-server/temp/*). This means, after page reload you will get the last (saved) state.
+
+The user can choose between three predefined color schemes:
+
+Light:
+![light Colro Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539794/2c4416da-0282-11e6-8637-5d684c519452.png)
+
+Dark:
+![Dark Color Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539705/c04be08e-0281-11e6-80ad-587815be3415.png)
+
+Blackboard:
+![Blackboard Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
+
+
+#### User definable keyboard shortcuts: <a name="shortcuts"></a>
+Speed up your workflow by relying less on the mouse. Create a custom list of keyboard shortcuts using various action keys.
+
+A keyboard shortcut customizing dialog will be added. At the moment you can change the shortcuts by editing the json files in the folder *./node_modules/files-and-folders-server/config/shortcut/*. There is a file with one of these names: *osx.json*, *windows.json* and *linux.json*. The used file depends on your operating system.
+
+In these json files you can map a shortcut with an action id. You can add more than one shortcut to an action id. The action ids should be self explained. Shortcuts are expained here: [Keypress](https://dmauro.github.io/Keypress/) by David Mauro.
+
+
 ## File Operations / Functions
 All file operations can be done on selected items (seleted files/folders in a file panel view or found file/folders after a search).
 
@@ -88,70 +157,6 @@ Opens a dialog with a list of sub directories.
 
 ### Go to anything <a name="GoToAnything"></a>
 A small dialog with auto completion allows the user to enter commands.
-
-## Installation
-
-Create an empty folder. Open your shell (console) and navigate to this folder. Enter:
-> npm i files-and-folders
-
-A directory named *node_modules* is created with some sub folders.
-Navigate to *node_modul
-Start app with:  node demo.app.js
-
-### Usage
-
-Edit and call the demo app:
-```js
-(function () {
-
-  "use strict";
-
-  var fnf = require('files-and-folders-server');
-  var open = require('open');
-
-  var port = 3002;
-
-  console.info('app / __dirname :', __dirname);
-  fnf.start({
-    // auth: require('./demo.auth.js'), // optional
-    clientRoot: __dirname + '/node_modules/files-and-folders-client/release',
-    port: port
-  });
-
-  var url = 'http://localhost:' + port + '/';
-  open(url);
-
-})();
-```
-You can set an auth module, see demo.auth.js.
-
-### Customizing
-
-
-
-#### User definable colors: <a name="colors"></a>
-
-A color customizing dialog will be added. At the moment you can change an existing color scheme (or add a new one) by editing the json files in the folder *./node_modules/files-and-folders-server/config/color/*.
-In browser click on the last button (pencil icon) to open the color menu and select a color scheme. The colors changes immediately. This state will be saved (see *./node_modules/files-and-folders-server/temp/*). This means, after page reload you will get the last (saved) state.
-
-The user can choose between three predefined color schemes:
-
-Light:
-![light Colro Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539794/2c4416da-0282-11e6-8637-5d684c519452.png)
-
-Dark:
-![Dark Color Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539705/c04be08e-0281-11e6-80ad-587815be3415.png)
-
-Blackboard:
-![Blackboard Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
-
-
-#### User definable keyboard shortcuts: <a name="shortcuts"></a>
-Speed up your workflow by relying less on the mouse. Create a custom list of keyboard shortcuts using various action keys.
-
-A keyboard shortcut customizing dialog will be added. At the moment you can change the shortcuts by editing the json files in the folder *./node_modules/files-and-folders-server/config/shortcut/*. There is a file with one of these names: *osx.json*, *windows.json* and *linux.json*. The used file depends on your operating system.
-
-In these json files you can map a shortcut with an action id. You can add more than one shortcut to an action id. The action ids should be self explained. Shortcuts are expained here: [Keypress](https://dmauro.github.io/Keypress/) by David Mauro.
 
 ## Related projects
 
