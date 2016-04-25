@@ -29,6 +29,10 @@ It's an early version! Tested on Windows 7 and Mac OS X. Documentation will be e
 * Open a terminal window with active folder ("New Terminal Here")
 * Much more
 
+## Note
+This software serves me as a sandbox to try out new technologies like [WebSockets](https://developer.mozilla.org/de/docs/WebSockets), [css custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) and so on. Therefore, the use of the latest browser is required (see [caniuse](http://caniuse.com/#search=css%20variables)).
+
+
 ## Installation
 
 Create an empty folder. Open your shell (console) and navigate to this folder. Enter:
