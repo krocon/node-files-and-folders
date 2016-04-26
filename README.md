@@ -82,6 +82,9 @@ You can set an auth module, see demo.auth.js.
 A color customizing dialog will be added. At the moment you can change an existing color scheme (or add a new one) by editing the json files in the folder *./node_modules/files-and-folders-server/config/color/*.
 In browser click on the last button (pencil icon) to open the color menu and select a color scheme. The colors changes immediately. This state will be saved (see *./node_modules/files-and-folders-server/temp/*). This means, after page reload you will get the last (saved) state.
 
+The user can create new color schemes with real time preview:
+![Color Config Dialog](https://cloud.githubusercontent.com/assets/11378781/14827249/c3efab9e-0be1-11e6-9c57-1f3c4402ce29.png)
+
 The user can choose between three predefined color schemes:
 
 Light:
@@ -92,6 +95,8 @@ Dark:
 
 Blackboard:
 ![Blackboard Scheme:](https://cloud.githubusercontent.com/assets/11378781/14539826/4f6d5f0e-0282-11e6-9b22-06ef8ebb369d.png)
+
+
 
 
 #### User definable keyboard shortcuts: <a name="shortcuts"></a>
